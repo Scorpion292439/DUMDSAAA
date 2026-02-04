@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: telegram-encode-bot
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: BOT_TOKEN
+        value: "8500043223:AAGNqLIe3qFHlbPo11DEgJjWqSE6CRj9-GE"
+      - key: ADMIN_IDS
+        value: "8528166940,8500043223"
+      - key: PORT
+        value: 8080
